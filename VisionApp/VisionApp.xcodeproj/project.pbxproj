@@ -15,6 +15,7 @@
 		0772E12E21F055E300BBF957 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0772E12D21F055E300BBF957 /* RoundedShadowView.swift */; };
 		0772E13021F0576800BBF957 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0772E12F21F0576800BBF957 /* RoundedShadowButton.swift */; };
 		0772E13221F057AB00BBF957 /* RoundedShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0772E13121F057AB00BBF957 /* RoundedShadowImageView.swift */; };
+		0772E13421F07AE100BBF957 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0772E13321F07AE100BBF957 /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0772E12D21F055E300BBF957 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		0772E12F21F0576800BBF957 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		0772E13121F057AB00BBF957 /* RoundedShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowImageView.swift; sourceTree = "<group>"; };
+		0772E13321F07AE100BBF957 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		0772E12C21F04C5200BBF957 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0772E13321F07AE100BBF957 /* SqueezeNet.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0772E11B21F04C1E00BBF957 /* CameraVC.swift in Sources */,
+				0772E13421F07AE100BBF957 /* SqueezeNet.mlmodel in Sources */,
 				0772E11921F04C1E00BBF957 /* AppDelegate.swift in Sources */,
 				0772E12E21F055E300BBF957 /* RoundedShadowView.swift in Sources */,
 				0772E13021F0576800BBF957 /* RoundedShadowButton.swift in Sources */,
