@@ -44,6 +44,10 @@
                                     <constraint firstAttribute="height" constant="125" id="v2c-IY-63a"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Hgi-oK-nUS">
+                                <rect key="frame" x="297" y="566" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJf-NE-X7C" customClass="RoundedShadowView" customModule="VisionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="35" width="335" height="60"/>
                                 <subviews>
@@ -80,6 +84,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cU1-Sy-7zj" secondAttribute="bottom" constant="20" id="0yf-iv-4Uf"/>
                             <constraint firstItem="qJf-NE-X7C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="2wj-ew-uxx"/>
+                            <constraint firstItem="Hgi-oK-nUS" firstAttribute="centerX" secondItem="cU1-Sy-7zj" secondAttribute="centerX" id="9Cj-ib-0bF"/>
+                            <constraint firstItem="Hgi-oK-nUS" firstAttribute="centerY" secondItem="cU1-Sy-7zj" secondAttribute="centerY" id="IDZ-LS-X0S"/>
                             <constraint firstItem="4lL-dQ-m1j" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lt8-X1-cer"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X1P-97-WxU" secondAttribute="bottom" constant="20" id="M6D-cZ-aIe"/>
                             <constraint firstItem="qJf-NE-X7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PiO-Ul-o21"/>
@@ -98,6 +104,7 @@
                         <outlet property="flashBtn" destination="X1P-97-WxU" id="Abl-sv-6z9"/>
                         <outlet property="identificationLbl" destination="PM9-rq-hpj" id="Iym-Xq-pEJ"/>
                         <outlet property="roundedLblView" destination="qJf-NE-X7C" id="FYp-fc-CS6"/>
+                        <outlet property="spinner" destination="Hgi-oK-nUS" id="H3t-eX-1aK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
