@@ -11,6 +11,11 @@ import AVFoundation
 import CoreML
 import Vision
 
+enum FlashState {
+    case off
+    case on
+}
+
 class CameraVC: UIViewController {
     
     var captureSession: AVCaptureSession!
@@ -19,14 +24,27 @@ class CameraVC: UIViewController {
     
     var photoData: Data?
     
+    var flashControlState: FlashState = .off
 
     @IBOutlet weak var capturedImgView: RoundedShadowImageView!
-    @IBOutlet weak var flashBtn: RoundedShadowView!
+    @IBOutlet weak var flashBtn: RoundedShadowButton!
     @IBOutlet weak var identificationLbl: UILabel!
     @IBOutlet weak var confidenceLbl: UILabel!
     
     @IBOutlet weak var roundedLblView: RoundedShadowView!
     @IBOutlet weak var cameraView: UIView!
+    
+    
+    @IBAction func flashBtnPressed(_ sender: Any) {
+        switch flashControlState {
+        case .off:
+            flashBtn.setTitle("Flash ON", for: .normal)
+            flashControlState = .on
+        case .on:
+            flashBtn.setTitle("Flash OFF", for: .normal)
+            flashControlState = .off
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +56,7 @@ class CameraVC: UIViewController {
         previewLayer.frame = cameraView.bounds
         
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -78,7 +97,14 @@ class CameraVC: UIViewController {
         let settings = AVCapturePhotoSettings()
         //let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         //let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType, kCVPixelBufferWidthKey as String: 160, kCVPixelBufferHeightKey as String: 160]
+        
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
+        
+        if flashControlState == .off {
+            settings.flashMode = .off
+        } else {
+            settings.flashMode = .on
+        }
         
         cameraOutput.capturePhoto(with: settings, delegate: self)
         

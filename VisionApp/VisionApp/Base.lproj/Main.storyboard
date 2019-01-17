@@ -20,7 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-dQ-m1j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.32156862749999998" green="0.74117647060000003" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-97-WxU" customClass="RoundedShadowButton" customModule="VisionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="612" width="100" height="35"/>
@@ -33,6 +33,9 @@
                                 <state key="normal" title="Flash OFF">
                                     <color key="titleColor" red="0.32156862749999998" green="0.74117647060000003" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7gE-WK-208"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-Sy-7zj" customClass="RoundedShadowImageView" customModule="VisionApp" customModuleProvider="target">
                                 <rect key="frame" x="275" y="522" width="80" height="125"/>
